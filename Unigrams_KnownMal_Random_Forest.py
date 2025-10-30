@@ -52,8 +52,6 @@ def load_data_from_directory(directory):
 train_PE_benign_dir = "[static path for data files]/vkl-benign/PE-format/train"
 train_know_malware_dir = "[static path for data files]/vkl-malware/known/train"
 test_know_malware_dir = "[static path for data files]/vkl-malware/known/test"
-test_unknow_malware_dir = ""
-test_unknow_clam_malware_dir = ""
 test_PE_benign_dir = "[static path for data files]/vkl-benign/PE-format/test"
 test_PE_extension_benign_dir = "[static path for data files]/vkl-benign/PE-extension/test"
 train_PE_extension_benign_dir = "[static path for data files]/vkl-benign/PE-extension/train"
@@ -63,8 +61,6 @@ train_know_malware_api_calls, train_know_malware_labels, train_know_malware_time
 train_PE_benign_api_calls, train_PE_benign_labels, train_PE_benign_times = load_data_from_directory(train_PE_benign_dir)
 train_PE_extension_benign_api_calls, train_PE_extension_benign_labels, train_PE_extension_benign_times = load_data_from_directory(train_PE_extension_benign_dir)
 test_know_malware_api_calls, test_know_malware_labels, test_know_malware_times = load_data_from_directory(test_know_malware_dir)
-test_unknow_malware_api_calls, test_unknow_malware_labels, test_unknow_malware_times = load_data_from_directory(test_unknow_malware_dir)
-test_unknow_clam_malware_api_calls, test_unknow_clam_malware_labels, test_unknow_clam_malware_times = load_data_from_directory(test_unknow_clam_malware_dir)
 test_PE_benign_api_calls, test_PE_benign_labels, test_PE_benign_times = load_data_from_directory(test_PE_benign_dir)
 test_PE_extension_api_calls, test_PE_extension_labels, test_PE_extension_times = load_data_from_directory(test_PE_extension_benign_dir)
 
