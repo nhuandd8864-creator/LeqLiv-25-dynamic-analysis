@@ -63,8 +63,8 @@ train_know_malware_api_calls, train_know_malware_labels, train_know_malware_time
 train_PE_benign_api_calls, train_PE_benign_labels, train_PE_benign_times = load_data_from_directory(train_PE_benign_dir)
 train_PE_extension_benign_api_calls, train_PE_extension_benign_labels, train_PE_extension_benign_times = load_data_from_directory(train_PE_extension_benign_dir)
 test_know_malware_api_calls, test_know_malware_labels, test_know_malware_times = load_data_from_directory(test_know_malware_dir)
-test_unknow_malware_api_calls, test_unknow_malware_labels, test_unknow_malware_times = load_data_from_directory(test_unknow_malware_dir)
-test_unknow_clam_malware_api_calls, test_unknow_clam_malware_labels, test_unknow_clam_malware_times = load_data_from_directory(test_unknow_clam_malware_dir)
+# test_unknow_malware_api_calls, test_unknow_malware_labels, test_unknow_malware_times = load_data_from_directory(test_unknow_malware_dir)
+# test_unknow_clam_malware_api_calls, test_unknow_clam_malware_labels, test_unknow_clam_malware_times = load_data_from_directory(test_unknow_clam_malware_dir)
 test_PE_benign_api_calls, test_PE_benign_labels, test_PE_benign_times = load_data_from_directory(test_PE_benign_dir)
 test_PE_extension_api_calls, test_PE_extension_labels, test_PE_extension_times = load_data_from_directory(test_PE_extension_benign_dir)
 
@@ -74,9 +74,9 @@ y_train = train_know_malware_labels + train_PE_benign_labels + train_PE_extensio
 times_train = train_know_malware_times + train_PE_benign_times + train_PE_extension_benign_times
 
 # Combine test data
-X_test = test_know_malware_api_calls + test_unknow_malware_api_calls + test_unknow_clam_malware_api_calls + test_PE_benign_api_calls + test_PE_extension_api_calls
-y_test = test_know_malware_labels + test_unknow_malware_labels + test_unknow_clam_malware_labels + test_PE_benign_labels + test_PE_extension_labels
-times_test = test_know_malware_times + test_unknow_malware_times + test_unknow_clam_malware_times + test_PE_benign_times + test_PE_extension_times
+X_test = test_know_malware_api_calls +  test_PE_benign_api_calls + test_PE_extension_api_calls
+y_test = test_know_malware_labels +  test_PE_benign_labels + test_PE_extension_labels
+times_test = test_know_malware_times + test_PE_benign_times + test_PE_extension_times
 
 X_train = [doc for doc in X_train if doc.strip()]  # Remove empty or whitespace-only documents
 X_test = [doc for doc in X_test if doc.strip()]
